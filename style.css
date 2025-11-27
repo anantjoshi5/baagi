@@ -1,0 +1,98 @@
+/*
+  Baagi Website Styles
+  A clean, responsive and accessible theme using a limited colour palette.
+*/
+
+:root {
+  --primary-color: #002b5c; /* deep blue */
+  --secondary-color: #007acc; /* azure blue */
+  --accent-color: #e0b500; /* gold accent */
+  --background-color: #fdfdfd; /* off‑white */
+  --text-color: #222; /* dark grey for contrast */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+nav {
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+footer {
+  background: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+/* Footnotes styling */
+.footnotes {
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+  margin-top: 2rem;
+}
+
+.footnotes li {
+  margin-bottom: 0.5rem;
+}
+
+.footnotes a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.footnotes a:hover {
+  text-decoration: underline;
+}
