@@ -1,29 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Baagi — solutions for community-level issues, policy, and services." />
   <title>Baagi — Community-first solutions</title>
+  <meta name="description" content="Baagi — modern, people-centred service and policy design." />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: linear-gradient(120deg, #e0ecff 0%, #f8fafb 100%) no-repeat; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Baagi Home">
-        <svg class="brand-logo" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="48" fill="currentColor"></circle>
-          <path d="M25,70 Q50,40 75,70" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
         </svg>
         <span class="brand-name">Baagi</span>
       </a>
       <nav class="main-nav" role="navigation" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
-          <span style="display:block;width:22px;height:2px;background:#222;border-radius:2px;position:relative;">
-            <span style="position:absolute;left:0;right:0;height:2px;background:#222;top:-7px;border-radius:2px;"></span>
-            <span style="position:absolute;left:0;right:0;height:2px;background:#222;top:7px;border-radius:2px;"></span>
-          </span>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
         </button>
         <ul id="primary-navigation" class="nav-list">
           <li><a href="index.html">Home</a></li>
@@ -38,24 +39,28 @@
       </nav>
     </div>
   </header>
+
   <main id="main" class="site-main" role="main">
 
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1>Better outcomes for communities through design and civic systems</h1>
-          <p class="lead">We research, design, and help implement service and policy solutions that centre people and practical outcomes.</p>
-          <p class="hero-cta">
-            <a class="btn primary" href="services.html">Explore services</a>
-            <a class="btn ghost" href="articles.html">Read articles</a>
+          <h1 style="font-weight:800;margin-bottom:.3em;">Modern public service design for real communities</h1>
+          <p class="lead" style="font-size:1.25rem;max-width:520px;color:#3d4a63;">
+              We help governments, NGOs, and local teams design policies, tools, and services that centre people and outcomes.
           </p>
+          <div class="hero-cta" style="margin-top:1.3em;">
+            <a class="btn primary" href="services.html">See our services</a>
+            <a class="btn ghost" href="articles.html">Read analysis</a>
+          </div>
         </div>
         <div aria-hidden="true">
-          <span class="illustration-min">
-            <svg viewBox="0 0 80 80" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="40" r="36" fill="#0466c8"/>
-              <circle cx="40" cy="40" r="24" fill="#7dd3fc"/>
-              <path d="M28 52 Q40 32 52 52" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <span class="illustration-min" style="display:block;max-width:160px;margin:auto;">
+            <svg viewBox="0 0 150 150" width="120" height="120">
+              <circle cx="75" cy="75" r="72" fill="#0466c8"/>
+              <circle cx="75" cy="75" r="44" fill="#c0e7fa"/>
+              <path d="M50,105 Q75,55 100,105" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <circle cx="75" cy="75" r="17" fill="#fff" fill-opacity=".5"/>
             </svg>
           </span>
         </div>
@@ -63,69 +68,70 @@
     </section>
 
     <section class="section container" aria-labelledby="what-we-do">
-      <h2 id="what-we-do">What we do</h2>
-      <p class="muted">Research, strategy, and product design for civic services — from policy to delivery.</p>
+      <h2 id="what-we-do" style="font-size:1.6rem;font-weight:700;">What we do</h2>
+      <p class="muted" style="margin-bottom:.7em;">Practical solutions for governments, organizations, and citizens.</p>
       <ul class="cards">
         <li class="card">
-          <h3>Service design</h3>
-          <p>Designing effective, inclusive services grounded in field research and easy-to-use flows.</p>
+          <h3>Service Design</h3>
+          <p>Simple, robust digital and offline services grounded in field research and usability.</p>
           <p><a class="card-link" href="services.html#service-design">Learn more →</a></p>
         </li>
         <li class="card">
-          <h3>Policy & governance</h3>
-          <p>Translating on-the-ground realities into practical policy recommendations and frameworks.</p>
+          <h3>Policy & Governance</h3>
+          <p>Real-world policy creation, digitization, and reform for clarity and accountability.</p>
           <p><a class="card-link" href="approach.html#policy">Learn more →</a></p>
         </li>
         <li class="card">
-          <h3>Research & partnerships</h3>
-          <p>Collaborations with communities, NGOs and governments to ensure solutions are feasible and equitable.</p>
+          <h3>Research & Partnerships</h3>
+          <p>Collaborating with communities and government for evidence-based, workable change.</p>
           <p><a class="card-link" href="stakeholders.html">Learn more →</a></p>
         </li>
       </ul>
     </section>
 
-    <section class="section container" aria-labelledby="latest">
-      <h2 id="latest">Latest articles</h2>
+    <section class="section container" aria-labelledby="latest-articles">
+      <h2 id="latest-articles" style="font-size:1.6rem;font-weight:700;">Latest Articles</h2>
       <ul class="cards article-list">
         <li class="article-card">
           <a href="article-police.html" class="article-link">
             <span class="article-thumb-min">
-              <svg width="35" height="35" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#7dd3fc"/><text x="50%" y="55%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Law</text></svg>
+              <svg width="40" height="40" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#7dd3fc"/><text x="50%" y="58%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Law</text></svg>
             </span>
             <div class="article-body">
-              <h3>Policing & community trust</h3>
+              <h3>Policing & trust</h3>
               <p class="meta">2025-01-21</p>
-              <p>Exploring pathways to rebuild public trust using service design and transparent processes.</p>
+              <p>Pathways to rebuild public trust using service design and transparency.</p>
             </div>
           </a>
         </li>
         <li class="article-card">
           <a href="article-permit.html" class="article-link">
             <span class="article-thumb-min">
-              <svg width="35" height="35" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#7dd3fc"/><text x="50%" y="55%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Docs</text></svg>
+              <svg width="40" height="40" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#b7dbfc"/><text x="50%" y="58%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Doc</text></svg>
             </span>
             <div class="article-body">
-              <h3>Permits and the informal economy</h3>
+              <h3>Permits & informal economy</h3>
               <p class="meta">2025-01-08</p>
-              <p>Designing permit systems that work for vendors without creating new barriers.</p>
+              <p>Making permit systems accessible without new barriers.</p>
             </div>
           </a>
         </li>
         <li class="article-card">
           <a href="article-land.html" class="article-link">
             <span class="article-thumb-min">
-              <svg width="35" height="35" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#7dd3fc"/><text x="50%" y="55%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Land</text></svg>
+              <svg width="40" height="40" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#b7dbfc"/><text x="50%" y="58%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Land</text></svg>
             </span>
             <div class="article-body">
               <h3>Land access & tenure</h3>
               <p class="meta">2024-12-10</p>
-              <p>Practical approaches for clarifying rights and delivering services at scale.</p>
+              <p>Approaches for clarifying property rights and scalable service delivery.</p>
             </div>
           </a>
         </li>
       </ul>
     </section>
   </main>
+
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -145,7 +151,7 @@
     </div>
   </footer>
   <script>
-    // Minimal nav toggle JS, accessible
+    // Accessible nav toggle
     (function () {
       const btn = document.querySelector('.nav-toggle');
       const nav = document.getElementById('primary-navigation');
@@ -154,7 +160,6 @@
         btn.setAttribute('aria-expanded', String(!expanded));
         nav.classList.toggle('open');
       });
-      // Current year
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
   </script>
