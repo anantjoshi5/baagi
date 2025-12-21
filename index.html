@@ -1,17 +1,26 @@
 <!DOCTYPE html>
+<!--
+  Updated homepage for Baagi.
+  We retain the modern hero section and call-to-action from the original design but
+  ensure meta tags and accessibility features are present. The header and footer
+  components have been extracted into a common structure used across all pages
+  in this folder. See other files in the same directory for examples.
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Baagi — Community-first solutions</title>
-  <meta name="description" content="Baagi — modern, people-centred service and policy design." />
+  <title>Baagi — Community‑first solutions</title>
+  <meta name="description" content="Baagi helps governments, NGOs and communities design modern, rule‑based public services and policies that centre people and outcomes." />
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* Retain subtle gradient background on the homepage */
     body { background: linear-gradient(120deg, #e0ecff 0%, #f8fafb 100%) no-repeat; }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Shared header with brand and responsive navigation -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Baagi Home">
@@ -28,7 +37,7 @@
         </button>
         <ul id="primary-navigation" class="nav-list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="problem.html">Problem & Vision</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
           <li><a href="philosophy.html">Philosophy</a></li>
           <li><a href="approach.html">Approach</a></li>
           <li><a href="stakeholders.html">Stakeholders</a></li>
@@ -41,13 +50,13 @@
   </header>
 
   <main id="main" class="site-main" role="main">
-
+    <!-- Hero section introducing Baagi’s mission -->
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
           <h1 style="font-weight:800;margin-bottom:.3em;">Modern public service design for real communities</h1>
           <p class="lead" style="font-size:1.25rem;max-width:520px;color:#3d4a63;">
-              We help governments, NGOs, and local teams design policies, tools, and services that centre people and outcomes.
+              We help governments, NGOs and local teams design policies, tools and services that centre people and outcomes.
           </p>
           <div class="hero-cta" style="margin-top:1.3em;">
             <a class="btn primary" href="services.html">See our services</a>
@@ -67,9 +76,10 @@
       </div>
     </section>
 
+    <!-- What we do cards -->
     <section class="section container" aria-labelledby="what-we-do">
       <h2 id="what-we-do" style="font-size:1.6rem;font-weight:700;">What we do</h2>
-      <p class="muted" style="margin-bottom:.7em;">Practical solutions for governments, organizations, and citizens.</p>
+      <p class="muted" style="margin-bottom:.7em;">Practical solutions for governments, organisations and citizens.</p>
       <ul class="cards">
         <li class="card">
           <h3>Service Design</h3>
@@ -77,18 +87,19 @@
           <p><a class="card-link" href="services.html#service-design">Learn more →</a></p>
         </li>
         <li class="card">
-          <h3>Policy & Governance</h3>
-          <p>Real-world policy creation, digitization, and reform for clarity and accountability.</p>
+          <h3>Policy &amp; Governance</h3>
+          <p>Real‑world policy creation, digitisation and reform for clarity and accountability.</p>
           <p><a class="card-link" href="approach.html#policy">Learn more →</a></p>
         </li>
         <li class="card">
-          <h3>Research & Partnerships</h3>
-          <p>Collaborating with communities and government for evidence-based, workable change.</p>
+          <h3>Research &amp; Partnerships</h3>
+          <p>Collaborating with communities and government for evidence‑based, workable change.</p>
           <p><a class="card-link" href="stakeholders.html">Learn more →</a></p>
         </li>
       </ul>
     </section>
 
+    <!-- Latest articles list -->
     <section class="section container" aria-labelledby="latest-articles">
       <h2 id="latest-articles" style="font-size:1.6rem;font-weight:700;">Latest Articles</h2>
       <ul class="cards article-list">
@@ -98,8 +109,8 @@
               <svg width="40" height="40" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#7dd3fc"/><text x="50%" y="58%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Law</text></svg>
             </span>
             <div class="article-body">
-              <h3>Policing & trust</h3>
-              <p class="meta">2025-01-21</p>
+              <h3>Policing &amp; trust</h3>
+              <p class="meta">2025‑01‑21</p>
               <p>Pathways to rebuild public trust using service design and transparency.</p>
             </div>
           </a>
@@ -110,8 +121,8 @@
               <svg width="40" height="40" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#b7dbfc"/><text x="50%" y="58%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Doc</text></svg>
             </span>
             <div class="article-body">
-              <h3>Permits & informal economy</h3>
-              <p class="meta">2025-01-08</p>
+              <h3>Permits &amp; informal economy</h3>
+              <p class="meta">2025‑01‑08</p>
               <p>Making permit systems accessible without new barriers.</p>
             </div>
           </a>
@@ -122,8 +133,8 @@
               <svg width="40" height="40" viewBox="0 0 35 35"><circle cx="17.5" cy="17.5" r="16" fill="#b7dbfc"/><text x="50%" y="58%" text-anchor="middle" font-size="13" fill="#0466c8" font-family="sans-serif">Land</text></svg>
             </span>
             <div class="article-body">
-              <h3>Land access & tenure</h3>
-              <p class="meta">2024-12-10</p>
+              <h3>Land access &amp; tenure</h3>
+              <p class="meta">2024‑12‑10</p>
               <p>Approaches for clarifying property rights and scalable service delivery.</p>
             </div>
           </a>
@@ -132,6 +143,7 @@
     </section>
   </main>
 
+  <!-- Shared footer with dynamic year and nav -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -151,7 +163,7 @@
     </div>
   </footer>
   <script>
-    // Accessible nav toggle
+    // Accessible nav toggle and dynamic year for all pages
     (function () {
       const btn = document.querySelector('.nav-toggle');
       const nav = document.getElementById('primary-navigation');
@@ -160,7 +172,10 @@
         btn.setAttribute('aria-expanded', String(!expanded));
         nav.classList.toggle('open');
       });
-      document.getElementById('year').textContent = new Date().getFullYear();
+      const year = document.getElementById('year');
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
     })();
   </script>
 </body>

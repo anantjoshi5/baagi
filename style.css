@@ -1,6 +1,6 @@
 /* Baagi — modern, responsive, accessible stylesheet
    Notes:
-   - Use CSS variables for colors/spacing/typography
+   - Use CSS variables for colours/spacing/typography
    - Simple, minimal, unified
 */
 
@@ -59,7 +59,7 @@ a:focus, button:focus { outline: 2px solid var(--color-primary-600); }
 .nav-list { list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; }
 .nav-list a { display: block; padding: 0.5rem 0.9rem; border-radius:6px; color:var(--color-text); font-weight:600; }
 .nav-list a:hover, .nav-list a:focus { background: rgba(4,102,200,0.08); color: var(--color-primary-600);}
-.nav-toggle { display: none; background: none; border: 0;}
+.nav-toggle { display: none; background: none; border: 0; cursor:pointer; }
 
 @media (max-width:640px){
   .nav-list { display: none; position: absolute; top:52px; right:1rem; background:#fff;box-shadow:0 3px 18px #0001;border-radius:8px;flex-direction:column;min-width:140px;}

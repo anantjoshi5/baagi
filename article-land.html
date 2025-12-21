@@ -1,59 +1,117 @@
 <!DOCTYPE html>
+<!-- In‑depth article: Smart Contracts for Land Titles.
+     Discusses how blockchain and smart contracts can modernise land registries
+     and secure property rights. Uses the unified site layout and includes a
+     descriptive meta tag for SEO. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Contracts for Land Titles – Baagi</title>
+  <meta name="description" content="Discover how blockchain and smart contracts can modernise land registries, enhance transparency and secure property rights for everyone." />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Smart Contracts for Land Titles</h1>
-    <p>Securing property rights with blockchain technology</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8" />
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc" />
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="stakeholders.html">Stakeholders</a></li>
+          <li><a href="services.html">Services</a></li>
+          <!-- Mark the Articles nav item as current on all article pages -->
+          <li><a href="articles.html" aria-current="page">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="problem.html">Problem &amp; Vision</a>
-    <a href="philosophy.html">Philosophy</a>
-    <a href="approach.html">Approach</a>
-    <a href="stakeholders.html">Stakeholders</a>
-    <a href="services.html">Services</a>
-    <a href="articles.html">Articles</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="container">
-    <section>
-      <h2>Introduction</h2>
-      <p>Secure property rights are fundamental to freedom and prosperity. Article&nbsp;17 of the Universal Declaration of Human Rights affirms that everyone has the right to own property and not be arbitrarily deprived of it. In many countries, however, land registries are paper‑based, fragmented and vulnerable to tampering. Transfers can take months and are prone to errors and fraud. Emerging technologies offer a way to modernise these systems while upholding the rule of law.</p>
-    </section>
-    <section>
-      <h2>Why Blockchain?</h2>
-      <p>Blockchain is a distributed ledger technology that records transactions in an immutable chain. Because each entry is timestamped and cryptographically linked to the previous one, altering past records without detection is virtually impossible. Hartmut Müller and Markus Seifert of the German Association of Surveying (DVW) highlight several benefits of a blockchain‑based land registry: faster implementation of ownership changes, automated notifications of ownership transfers, greater transparency for customers, elimination of physical archives, increased flexibility and resilience, and greater security for registry actors.<sup><a href="#fn1">1</a></sup></p>
-      <p>In Sweden, the national land registry (Lantmäteriet) piloted a blockchain solution for property transactions. The project demonstrated that smart contracts – self‑executing agreements encoded on a blockchain – could reduce the time to register a title from months to days and, according to estimates, save more than €100&nbsp;million annually by cutting intermediaries and paperwork. Although not yet rolled out nationwide, the pilot illustrates the potential efficiency gains of digital, rule‑based land administration.</p>
-    </section>
-    <section>
-      <h2>How Smart Contracts Work</h2>
-      <p>A smart contract for a land transfer encodes the steps required by law: verifying the seller’s title, checking that taxes are paid, obtaining signatures and updating the registry. Once all conditions are met, the contract automatically records the transfer and triggers notifications to the parties and relevant authorities. Because the logic is transparent and executed on a tamper‑proof ledger, neither party can alter the terms unilaterally.</p>
-      <p>Integrating smart contracts into land registries requires clear legislation. Lawmakers must define digital signatures, specify the legal effect of blockchain records and ensure compatibility with existing property law. Public agencies must also provide user‑friendly interfaces and assistance for those unfamiliar with technology. Importantly, any blockchain solution must include recourse mechanisms to correct errors or fraudulent entries; no system should be beyond human oversight.</p>
-    </section>
-    <section>
-      <h2>Benefits and Cautions</h2>
-      <p>Deploying blockchain for land titles offers several benefits. Transparency deters fraud and reduces opportunities for corruption. Automated notifications mean that stakeholders are informed of changes immediately. Removing physical archives reduces costs and improves resilience to disasters. However, technology is not a panacea. Initial implementation costs can be high, and digital exclusion can arise if people lack internet access or digital literacy. A phased approach – beginning with pilot projects and comprehensive stakeholder engagement – can mitigate these risks.</p>
-    </section>
-    <section>
-      <h2>Conclusion</h2>
-      <p>Secure and efficient land administration underpins economic development and individual liberty. Blockchain and smart contracts offer powerful tools to modernise registries, but they must be integrated thoughtfully within a legal framework that protects rights and ensures accountability. Baagi supports pilot projects that demonstrate the feasibility of tamper‑proof digital registries and advocates for reforms that turn these pilots into nationwide systems, giving people confidence that their homes and farms are theirs alone.</p>
-    </section>
-    <section class="footnotes">
-      <h3>References</h3>
-      <ol>
-        <li id="fn1"><a href="https://www.fig.net/resources/proceedings/fig_proceedings/fig2019/papers/ts01i/TS01I_seifert_mueller_10110.pdf" target="_blank">Hartmut Müller &amp; Markus Seifert, <em>Blockchain, a Feasible Technology for Land Administration?</em> (FIG Working Week 2019)</a> – outlines potential benefits of a blockchain‑based land register, including faster implementation of ownership changes, automated notifications of transfers, greater transparency, elimination of physical archives, more flexibility and resilience and greater security for registry actors.</li>
-        <li id="fn2"><a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank">United Nations, <em>Universal Declaration of Human Rights</em> (1948)</a> – Article 17 states that everyone has the right to own property alone as well as in association with others and that no one shall be arbitrarily deprived of their property.</li>
-      </ol>
-    </section>
-  </div>
-  <footer>
-    <p>&copy; 2025 Baagi. All rights reserved.</p>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Smart Contracts for Land Titles</h1>
+        <p class="muted">Securing property rights with blockchain technology</p>
+      </header>
+      <section>
+        <h2>Introduction</h2>
+        <p>Secure property rights are fundamental to freedom and prosperity. Article&nbsp;17 of the Universal Declaration of Human Rights affirms that everyone has the right to own property and not be arbitrarily deprived of it. In many countries, however, land registries are paper‑based, fragmented and vulnerable to tampering. Transfers can take months and are prone to errors and fraud. Emerging technologies offer a way to modernise these systems while upholding the rule of law.</p>
+      </section>
+      <section>
+        <h2>Why blockchain?</h2>
+        <p>Blockchain is a distributed ledger technology that records transactions in an immutable chain. Because each entry is timestamped and cryptographically linked to the previous one, altering past records without detection is virtually impossible. Hartmut Müller and Markus Seifert of the German Association of Surveying (DVW) highlight several benefits of a blockchain‑based land registry: faster implementation of ownership changes, automated notifications of ownership transfers, greater transparency for customers, elimination of physical archives, increased flexibility and resilience, and greater security for registry actors.<sup><a href="#fn1">1</a></sup></p>
+        <p>In Sweden, the national land registry (Lantmäteriet) piloted a blockchain solution for property transactions. The project demonstrated that smart contracts – self‑executing agreements encoded on a blockchain – could reduce the time to register a title from months to days and, according to estimates, save more than €100&nbsp;million annually by cutting intermediaries and paperwork. Although not yet rolled out nationwide, the pilot illustrates the potential efficiency gains of digital, rule‑based land administration.</p>
+      </section>
+      <section>
+        <h2>How smart contracts work</h2>
+        <p>A smart contract for a land transfer encodes the steps required by law: verifying the seller’s title, checking that taxes are paid, obtaining signatures and updating the registry. Once all conditions are met, the contract automatically records the transfer and triggers notifications to the parties and relevant authorities. Because the logic is transparent and executed on a tamper‑proof ledger, neither party can alter the terms unilaterally.</p>
+        <p>Integrating smart contracts into land registries requires clear legislation. Lawmakers must define digital signatures, specify the legal effect of blockchain records and ensure compatibility with existing property law. Public agencies must also provide user‑friendly interfaces and assistance for those unfamiliar with technology. Importantly, any blockchain solution must include recourse mechanisms to correct errors or fraudulent entries; no system should be beyond human oversight.</p>
+      </section>
+      <section>
+        <h2>Benefits and cautions</h2>
+        <p>Deploying blockchain for land titles offers several benefits. Transparency deters fraud and reduces opportunities for corruption. Automated notifications mean that stakeholders are informed of changes immediately. Removing physical archives reduces costs and improves resilience to disasters. However, technology is not a panacea. Initial implementation costs can be high, and digital exclusion can arise if people lack internet access or digital literacy. A phased approach – beginning with pilot projects and comprehensive stakeholder engagement – can mitigate these risks.</p>
+      </section>
+      <section>
+        <h2>Conclusion</h2>
+        <p>Secure and efficient land administration underpins economic development and individual liberty. Blockchain and smart contracts offer powerful tools to modernise registries, but they must be integrated thoughtfully within a legal framework that protects rights and ensures accountability. Baagi supports pilot projects that demonstrate the feasibility of tamper‑proof digital registries and advocates for reforms that turn these pilots into nationwide systems, giving people confidence that their homes and farms are theirs alone.</p>
+      </section>
+      <section class="footnotes">
+        <h3>References</h3>
+        <ol>
+          <li id="fn1"><a href="https://www.fig.net/resources/proceedings/fig_proceedings/fig2019/papers/ts01i/TS01I_seifert_mueller_10110.pdf" target="_blank">Hartmut Müller &amp; Markus Seifert, <em>Blockchain, a Feasible Technology for Land Administration?</em> (FIG Working Week&nbsp;2019)</a> – outlines potential benefits of a blockchain‑based land register, including faster implementation of ownership changes, automated notifications, greater transparency, elimination of physical archives, more flexibility and resilience and greater security for registry actors.</li>
+          <li id="fn2"><a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank">United Nations, <em>Universal Declaration of Human Rights</em> (1948)</a> – Article 17 states that everyone has the right to own property alone as well as in association with others and that no one shall be arbitrarily deprived of their property.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html" aria-current="page">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>

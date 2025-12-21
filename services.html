@@ -1,46 +1,101 @@
 <!DOCTYPE html>
+<!-- Services page for Baagi.
+     Describes the services we provide to governments and organisations. Adopts the common layout with header and footer. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services – Baagi</title>
+  <meta name="description" content="Discover Baagi’s services, including policy and legal analysis, rule‑based system design, capacity building and accountability mechanisms." />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Our Services</h1>
-    <p>How we support governments and organisations</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="stakeholders.html">Stakeholders</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="problem.html">Problem &amp; Vision</a>
-    <a href="philosophy.html">Philosophy</a>
-    <a href="approach.html">Approach</a>
-    <a href="stakeholders.html">Stakeholders</a>
-    <a href="services.html">Services</a>
-    <a href="articles.html">Articles</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="container">
-    <section>
-      <h2>Policy and Legal Analysis</h2>
-      <p>We analyse laws, regulations and administrative procedures to identify areas where discretionary power leads to inconsistent outcomes. Our team translates legal provisions into clear decision criteria and recommends reforms to eliminate ambiguity. We also assess potential legal risks of automation and ensure compliance with human rights and data‑protection standards.</p>
-    </section>
-    <section>
-      <h2>Rule‑Based System Design</h2>
-      <p>Baagi designs and prototypes rule‑based decision tools tailored to specific government processes. This includes building decision trees, smart contracts and simple machine‑learning models that apply defined criteria without bias. We work closely with officials to ensure the tools reflect the law accurately and can be audited.</p>
-    </section>
-    <section>
-      <h2>Capacity Building</h2>
-      <p>Successful adoption of digital governance requires skills and confidence. We provide training programmes for civil servants on digital literacy, algorithmic accountability and data ethics. These sessions demystify AI, explain how algorithms reach conclusions and teach officials how to oversee automated processes.</p>
-    </section>
-    <section>
-      <h2>Accountability and Audit Mechanisms</h2>
-      <p>Automation without oversight can undermine trust. We help design appeals processes, independent audit mechanisms and transparency dashboards. These components ensure that every automated decision is traceable, explainable and open to challenge by citizens or regulators.</p>
-    </section>
-  </div>
-  <footer>
-    <p>&copy; 2025 Baagi. All rights reserved.</p>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Our Services</h1>
+        <p class="muted">How we support governments and organisations</p>
+      </header>
+      <section>
+        <h2>Policy and legal analysis</h2>
+        <p>We analyse laws, regulations and administrative procedures to identify areas where discretionary power leads to inconsistent outcomes. Our team translates legal provisions into clear decision criteria and recommends reforms to eliminate ambiguity. We also assess potential legal risks of automation and ensure compliance with human rights and data‑protection standards.</p>
+      </section>
+      <section>
+        <h2>Rule‑based system design</h2>
+        <p>Baagi designs and prototypes rule‑based decision tools tailored to specific government processes. This includes building decision trees, smart contracts and simple machine‑learning models that apply defined criteria without bias. We work closely with officials to ensure the tools reflect the law accurately and can be audited.</p>
+      </section>
+      <section>
+        <h2>Capacity building</h2>
+        <p>Successful adoption of digital governance requires skills and confidence. We provide training programmes for civil servants on digital literacy, algorithmic accountability and data ethics. These sessions demystify AI, explain how algorithms reach conclusions and teach officials how to oversee automated processes.</p>
+      </section>
+      <section>
+        <h2>Accountability and audit mechanisms</h2>
+        <p>Automation without oversight can undermine trust. We help design appeals processes, independent audit mechanisms and transparency dashboards. These components ensure that every automated decision is traceable, explainable and open to challenge by citizens or regulators.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>

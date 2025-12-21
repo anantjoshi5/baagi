@@ -1,44 +1,99 @@
 <!DOCTYPE html>
+<!-- Articles listing page for Baagi.
+     Provides links and introductions to in‑depth articles. Shares the unified site layout. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Articles &amp; Analysis – Baagi</title>
+  <meta name="description" content="Read Baagi’s articles and analysis on governance, law and technology, including pieces on permits, policing and land rights." />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Articles &amp; Analysis</h1>
-    <p>In‑depth explorations of governance, law and technology</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="stakeholders.html">Stakeholders</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="articles.html" aria-current="page">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="problem.html">Problem &amp; Vision</a>
-    <a href="philosophy.html">Philosophy</a>
-    <a href="approach.html">Approach</a>
-    <a href="stakeholders.html">Stakeholders</a>
-    <a href="services.html">Services</a>
-    <a href="articles.html">Articles</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="container">
-    <section>
-      <article>
-        <h2><a href="article-permit.html">Permit Raj: How Bureaucracy Feeds Corruption</a></h2>
-        <p>India’s labyrinth of licences and approvals has spawned a culture of bribery and delay. We examine how ambiguous rules and discretionary powers create opportunities for rent‑seeking and show how codified, digital processes can end the “speed money” economy.</p>
-      </article>
-      <article>
-        <h2><a href="article-police.html">Police Stops and Discretion: Lessons from Europe</a></h2>
-        <p>Law‑enforcement officers often rely on instinct when stopping and searching individuals. Drawing on European survey data, this article highlights disparities in how minority communities experience police stops and proposes a framework for objective, rule‑driven policing.</p>
-      </article>
-      <article>
-        <h2><a href="article-land.html">Smart Contracts for Land Titles: Securing Property Rights</a></h2>
-        <p>Blockchain and smart contracts promise faster, more transparent land registries. We explore a pilot project in Europe, detailing how tamper‑proof ledgers can protect property rights, reduce fraud and save millions in administrative costs.</p>
-      </article>
-    </section>
-  </div>
-  <footer>
-    <p>&copy; 2025 Baagi. All rights reserved.</p>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Articles &amp; Analysis</h1>
+        <p class="muted">In‑depth explorations of governance, law and technology</p>
+      </header>
+      <section>
+        <article>
+          <h2><a href="article-permit.html">Permit Raj: How Bureaucracy Feeds Corruption</a></h2>
+          <p>India’s labyrinth of licences and approvals has spawned a culture of bribery and delay. We examine how ambiguous rules and discretionary powers create opportunities for rent‑seeking and show how codified, digital processes can end the “speed money” economy.</p>
+        </article>
+        <article>
+          <h2><a href="article-police.html">Police Stops and Discretion: Lessons from Europe</a></h2>
+          <p>Law‑enforcement officers often rely on instinct when stopping and searching individuals. Drawing on European survey data, this article highlights disparities in how minority communities experience police stops and proposes a framework for objective, rule‑driven policing.</p>
+        </article>
+        <article>
+          <h2><a href="article-land.html">Smart Contracts for Land Titles: Securing Property Rights</a></h2>
+          <p>Blockchain and smart contracts promise faster, more transparent land registries. We explore a pilot project in Europe, detailing how tamper‑proof ledgers can protect property rights, reduce fraud and save millions in administrative costs.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html" aria-current="page">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>
