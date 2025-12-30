@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Stakeholders page for Baagi.
+     Identifies key stakeholder groups and their concerns. Uses common header and
+     footer for consistency across the site. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stakeholders – Baagi</title>
+  <meta name="description" content="Learn about Baagi’s stakeholders – frontline officials, citizens and policy makers – and how our work addresses their needs and concerns." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="stakeholders.html" aria-current="page">Stakeholders</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Stakeholders</h1>
+        <p class="muted">Understanding the fears, hopes and roles of those affected</p>
+      </header>
+      <section>
+        <h2>Frontline officials</h2>
+        <p>Bureaucrats and police officers are often tasked with making complex judgements under pressure and with limited resources. Many see discretion as necessary to handle exceptions in rigid processes. Baagi recognises their expertise and seeks to design digital tools that help rather than replace them. When rules are codified and routine decisions automated, officials can focus on truly exceptional cases, exercise professional judgement where it is needed and spend less time on paperwork. We also invest in training and change management so that officers understand how algorithms reach conclusions and feel confident overseeing them.</p>
+      </section>
+      <section>
+        <h2>Citizens</h2>
+        <p>Citizens are the primary beneficiaries of fair, rule‑based governance. They suffer when arbitrary decisions deny permits, licences or welfare benefits, and when bias in policing undermines trust. Data from the European Union Agency for Fundamental Rights shows that people with an ethnic minority or immigrant background are disproportionately subject to searches and requests for identity papers during police stops.<sup><a href="#fn1">1</a></sup> These experiences erode confidence in public institutions. By making decision criteria public and automating their application, Baagi aims to restore predictability, reduce harassment and create simple appeal channels when decisions are wrong.</p>
+      </section>
+      <section>
+        <h2>Policy makers and leaders</h2>
+        <p>Senior officials and elected representatives have the authority to mandate rule‑based processes and allocate resources to digitisation. They may worry about the political consequences of enforcing rules strictly or about the risk of algorithmic bias. Research by the UK’s Centre for Data Ethics and Innovation highlights the need for transparency and accountability when deploying algorithms, calling on leaders to remain responsible for outcomes even when using automated systems.<sup><a href="#fn2">2</a></sup> By piloting projects, documenting benefits and addressing concerns openly, Baagi helps leaders champion reforms that increase trust and efficiency.</p>
+      </section>
+      <section class="footnotes">
+        <h3>References</h3>
+        <ol>
+          <li id="fn1"><a href="https://fra.europa.eu/sites/default/files/fra_uploads/fra-2021-fundamental-rights-survey-police-stops_en.pdf" target="_blank">European Union Agency for Fundamental Rights, <em>Your rights matter: Police stops</em> (2021)</a> – reports that 34 % of people with an ethnic minority or immigrant background who were stopped on foot were searched, compared with 14 % of the general population.</li>
+          <li id="fn2"><a href="https://assets.publishing.service.gov.uk/media/60142096d3bf7f70ba377b20/Review_into_bias_in_algorithmic_decision-making.pdf" target="_blank">Centre for Data Ethics and Innovation, <em>Review into bias in algorithmic decision‑making</em> (2020)</a> – emphasises that decision‑makers must anticipate algorithmic bias, ensure transparency and retain accountability for outcomes.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
