@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Approach page for Baagi.
+     Explains how Baagi codifies rules, automates routine decisions and delegates with oversight. The standard header and
+     footer provide navigation consistency. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Approach – Baagi</title>
+  <meta name="description" content="Discover Baagi’s approach to codifying rules, automating routine decisions and ensuring human oversight for accountable governance." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="approach.html" aria-current="page">Approach</a></li>
+          <li><a href="stakeholders.html">Stakeholders</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Our Approach</h1>
+        <p class="muted">How we build a future of rule‑based governance</p>
+      </header>
+      <section>
+        <h2>1. Codify the rules</h2>
+        <p>Every fair system begins with clear rules. Many laws and procedures are already well defined but buried in legislation or manuals. We work with policymakers and lawyers to translate these rules into machine‑readable formats such as decision trees and smart contracts. Publishing these codified rules makes them transparent and gives citizens a reliable reference. It also highlights gaps or contradictions in the law that legislators can address.</p>
+      </section>
+      <section>
+        <h2>2. Automate routine decisions</h2>
+        <p>Once rules are codified, repeatable decisions can be handled by software. Whether approving permits, allocating benefits or auditing tax returns, algorithms can apply published criteria consistently and quickly. Used properly, automation can reduce human bias and errors. However, the UK government’s review into algorithmic decision‑making warns that data and automation can also entrench historic biases if implemented carelessly.<sup><a href="#fn1">1</a></sup> The report emphasises the need for proactive steps to identify and mitigate bias, for transparency about how algorithms work and for senior decision‑makers to retain accountability.<sup><a href="#fn1">1</a></sup> Baagi therefore advocates for explainable algorithms, regular audits and publicly available documentation.</p>
+      </section>
+      <section>
+        <h2>3. Delegate with oversight</h2>
+        <p>Only after trust and reliability are established should certain decisions be fully delegated to automated systems. Even then, humans remain in the loop: officials oversee the system, review edge cases and handle appeals. Transparent audit trails allow independent bodies to verify that each decision followed the published rules. The same UK review stresses that transparency is key to maintaining public trust – organisational leaders must be clear that they remain accountable for decisions even when an algorithm executes them.<sup><a href="#fn1">1</a></sup> We build appeals mechanisms so that citizens can challenge automated decisions and ensure that the system continuously learns from feedback.</p>
+      </section>
+      <section class="footnotes">
+        <h3>References</h3>
+        <ol>
+          <li id="fn1"><a href="https://assets.publishing.service.gov.uk/media/60142096d3bf7f70ba377b20/Review_into_bias_in_algorithmic_decision-making.pdf" target="_blank">Centre for Data Ethics and Innovation, <em>Review into bias in algorithmic decision‑making</em> (2020)</a> – the report notes that algorithms can entrench or amplify historic biases and calls for proactive steps to anticipate risks, ensure transparency and retain human accountability.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

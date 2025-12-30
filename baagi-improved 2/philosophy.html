@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Philosophy page for Baagi.
+     This page articulates the libertarian principles and rule‑of‑law framework that underpin Baagi’s work. It inherits the same
+     header and footer used throughout the site for consistency. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philosophy – Baagi</title>
+  <meta name="description" content="Baagi’s philosophy emphasises individual rights, property rights, the rule of law, limited government and free markets." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
+          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
+          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html" aria-current="page">Philosophy</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="stakeholders.html">Stakeholders</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Our Philosophy</h1>
+        <p class="muted">Libertarian principles and the rule of law guide our work</p>
+      </header>
+      <section>
+        <h2>Individual Rights and the Rule of Law</h2>
+        <p>Baagi’s work is rooted in a belief that individuals have inherent rights to life, liberty and property. These rights are not granted by governments; rather, governments exist to protect them. Article 17 of the Universal Declaration of Human Rights proclaims that everyone has the right to own property alone as well as in association with others, and that no one shall be arbitrarily deprived of their property.<sup><a href="#fn1">1</a></sup> Strong property rights empower people to plan for the future and resist arbitrary state action.</p>
+        <p>Central to our philosophy is the rule of law. The United Nations defines it as a principle of governance in which all persons, institutions and entities – including the state itself – are accountable to publicly promulgated laws that are equally enforced and independently adjudicated.<sup><a href="#fn2">2</a></sup> Fairness, equality before the law and avoidance of arbitrariness are essential to this definition. By automating rule‑based decisions, we aim to strengthen these principles in practice.</p>
+      </section>
+      <section>
+        <h2>Limited Government and Free Markets</h2>
+        <p>A libertarian perspective recognises that power tends to corrupt. When governments expand beyond their core functions, they create opportunities for rent‑seeking, discretion and abuse. We advocate for limited government focused on defining and enforcing clear rules. This includes protecting contracts and property rights, maintaining public order and providing a neutral framework within which individuals and businesses can freely cooperate.</p>
+        <p>Free markets enable voluntary exchange and innovation. They harness dispersed knowledge and allow individuals to pursue their own goals without coercing others. By contrast, discretionary regulation can stifle enterprise and favour insiders. Baagi supports policies that minimise arbitrary interventions and instead rely on predictable rules applied transparently through digital means.</p>
+      </section>
+      <section class="footnotes">
+        <h3>References</h3>
+        <ol>
+          <li id="fn1"><a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank">United Nations, <em>Universal Declaration of Human Rights</em> (1948)</a> – Article 17 states that everyone has the right to own property alone as well as in association with others and that no one shall be arbitrarily deprived of their property.</li>
+          <li id="fn2"><a href="https://www.un.org/ruleoflaw/what-is-the-rule-of-law/" target="_blank">United Nations, <em>What is the rule of law?</em> (2023)</a> – defines the rule of law as accountability to laws that are publicly promulgated, equally enforced and independently adjudicated, emphasising equality before the law and avoidance of arbitrariness.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
