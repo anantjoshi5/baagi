@@ -14,8 +14,8 @@
   <meta name="description" content="Baagi helps governments, NGOs and communities design modern, rule‑based public services and policies that centre people and outcomes." />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Retain subtle gradient background on the homepage */
-    body { background: linear-gradient(120deg, #e0ecff 0%, #f8fafb 100%) no-repeat; }
+    /* Retain subtle gradient background on the homepage using CSS variables so it respects dark mode */
+    body { background: linear-gradient(120deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%) no-repeat; }
   </style>
 </head>
 <body>
@@ -24,11 +24,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Baagi Home">
-        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
-          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
-          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
-        </svg>
+        <img class="brand-logo" src="images/gadsden-snake.png" alt="Gadsden snake logo" />
         <span class="brand-name">Baagi</span>
       </a>
       <nav class="main-nav" role="navigation" aria-label="Primary">
@@ -46,6 +42,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Dark mode toggle button for switching themes -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     </div>
   </header>
 
@@ -163,18 +161,49 @@
     </div>
   </footer>
   <script>
-    // Accessible nav toggle and dynamic year for all pages
     (function () {
-      const btn = document.querySelector('.nav-toggle');
+      // Navigation toggle for mobile view
+      const navToggle = document.querySelector('.nav-toggle');
       const nav = document.getElementById('primary-navigation');
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-      });
-      const year = document.getElementById('year');
-      if (year) {
-        year.textContent = new Date().getFullYear();
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('open');
+        });
+      }
+      // Ensure theme toggle button exists
+      const headerInner = document.querySelector('.header-inner');
+      let themeToggle = document.getElementById('theme-toggle');
+      if (!themeToggle && headerInner) {
+        themeToggle = document.createElement('button');
+        themeToggle.id = 'theme-toggle';
+        themeToggle.className = 'theme-toggle';
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        headerInner.appendChild(themeToggle);
+      }
+      const body = document.body;
+      function updateIcon() {
+        if (!themeToggle) return;
+        themeToggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+      }
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          body.classList.add('dark');
+        }
+        updateIcon();
+        themeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark');
+          localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+          updateIcon();
+        });
+      }
+      // Update copyright year automatically
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
       }
     })();
   </script>

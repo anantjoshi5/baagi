@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- In‑depth article: Free Markets and the Great Enrichment.
+     Explores how economic freedom has lifted billions out of poverty and why
+     defending capitalism remains vital. Shares the unified Baagi site layout
+     and includes a descriptive meta tag for SEO. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Markets and the Great Enrichment – Baagi</title>
+  <meta name="description" content="Learn how economic freedom and free markets lifted billions out of poverty and fueled the Great Enrichment, and why defending capitalism remains essential." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baagi Home">
+        <img class="brand-logo" src="images/gadsden-snake.png" alt="Gadsden snake logo" />
+        <span class="brand-name">Baagi</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">Problem &amp; Vision</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="stakeholders.html">Stakeholders</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="articles.html" aria-current="page">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <div class="container">
+      <header>
+        <h1>Free Markets and the Great Enrichment</h1>
+        <p class="muted">How economic freedom created unprecedented prosperity</p>
+      </header>
+      <section>
+        <h2>Introduction</h2>
+        <p>The last few centuries have witnessed a dramatic increase in living standards. This <em>Great Enrichment</em> refers to the explosion of prosperity that has lifted billions of people out of poverty and given today’s middle class luxuries unimaginable to past monarchs. At the heart of this transformation is economic freedom: when individuals are allowed to trade, innovate and cooperate without undue interference, they create wealth on a scale previously unseen.</p>
+      </section>
+      <section>
+        <h2>Free markets create prosperity</h2>
+        <p>The Cato Institute notes that liberty and free markets give us the incentives to use our talents and cooperate with others to produce and create. By unleashing these forces, free markets have lifted billions out of poverty and fueled what scholar Deirdre McCloskey calls the Great Enrichment.<sup><a href="#fn1">1</a></sup> In other words, the opportunity to buy and sell freely is not just an abstract ideal; it is the engine of material progress.</p>
+        <p>Despite these gains, the fight for economic freedom is not over. Governments continue to impose barriers that stifle growth, innovation and wealth creation.<sup><a href="#fn1">1</a></sup> Defending free enterprise means pushing back against protectionism, high taxes and regulations that discourage entrepreneurship.</p>
+      </section>
+      <section>
+        <h2>Defending economic freedom</h2>
+        <p>The case for capitalism is gaining unlikely allies. Cato observes that some of the world’s most influential voices are echoing its arguments.<sup><a href="#fn2">2</a></sup> On Joe Rogan’s podcast, entrepreneur Elon Musk quoted Milton Friedman while making the case for economic freedom; Senator Rand Paul called Johan Norberg’s <em>The Capitalist Manifesto</em> “a must‑read,” and venture capitalist Marc Andreessen dubbed Cato scholars the “patron saints of optimism”.<sup><a href="#fn2">2</a></sup> Such endorsements show that defending free markets isn’t just an academic exercise—it resonates with innovators and policymakers alike.</p>
+        <p>The lesson is clear: prosperity doesn’t come from government planning. It arises from people trading, experimenting and creating value for one another. To sustain the Great Enrichment, societies must continue to embrace competition, protect property rights and keep markets open.</p>
+      </section>
+      <section>
+        <h2>Conclusion</h2>
+        <p>Economic freedom has delivered miracles. Billions have escaped poverty, and the world is more innovative and interconnected than ever before. Yet those gains are fragile. Political pressures for protectionism and state control threaten to slow progress. Defending free markets—through sound policy, education and advocacy—is essential to ensure that the Great Enrichment continues for future generations.</p>
+      </section>
+      <section class="footnotes">
+        <h3>References</h3>
+        <ol>
+          <li id="fn1"><a href="https://www.cato.org/annual-report-2024/unleashing-freedom-prosper" target="_blank">Cato Institute, <em>Unleashing the Freedom to Prosper</em> (2025)</a> – explains how liberty and free markets have lifted billions out of poverty, fuelling the Great Enrichment, and notes that governments continue to impose barriers that stifle growth.</li>
+          <li id="fn2"><a href="https://www.cato.org/annual-report-2024/unleashing-freedom-prosper" target="_blank">Cato Institute, <em>Unleashing the Freedom to Prosper</em> (2025)</a> – highlights how influential voices such as Elon Musk, Senator Rand Paul and Marc Andreessen amplify Cato’s case for economic freedom and celebrate Cato scholars as “patron saints of optimism”.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Baagi</strong>
+        <p class="muted">Design for community systems</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html" aria-current="page">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">
+        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      // Navigation toggle for mobile view
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('open');
+        });
+      }
+      // Ensure theme toggle button exists
+      const headerInner = document.querySelector('.header-inner');
+      let themeToggle = document.getElementById('theme-toggle');
+      if (!themeToggle && headerInner) {
+        themeToggle = document.createElement('button');
+        themeToggle.id = 'theme-toggle';
+        themeToggle.className = 'theme-toggle';
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        headerInner.appendChild(themeToggle);
+      }
+      const body = document.body;
+      function updateIcon() {
+        if (!themeToggle) return;
+        themeToggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+      }
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          body.classList.add('dark');
+        }
+        updateIcon();
+        themeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark');
+          localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+          updateIcon();
+        });
+      }
+      // Update copyright year automatically
+      const yearElem = document.getElementById('year');
+      if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

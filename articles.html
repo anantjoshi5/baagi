@@ -14,11 +14,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Baagi Home">
-        <svg class="brand-logo" width="38" height="38" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="46" fill="#0466c8"/>
-          <circle cx="50" cy="50" r="30" fill="#7dd3fc"/>
-          <path d="M35,68 Q52,40 65,68" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
-        </svg>
+        <img class="brand-logo" src="images/gadsden-snake.png" alt="Gadsden snake logo" />
         <span class="brand-name">Baagi</span>
       </a>
       <nav class="main-nav" role="navigation" aria-label="Primary">
@@ -36,6 +32,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Dark mode toggle button for switching themes -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     </div>
   </header>
 
@@ -98,6 +96,28 @@
           <h2><a href="article-immigration.html">Immigration and Economic Growth</a></h2>
           <p>Immigrants are workers, entrepreneurs and taxpayers who drive growth and stave off population decline. This article presents evidence that a freer, more orderly immigration system would benefit Americans and the economy.</p>
         </article>
+
+        <!-- Newly added articles summarising minarchist organisations around the world -->
+        <article>
+          <h2><a href="article-global-network.html">Global Freedom Network</a></h2>
+          <p>A transnational liberty movement is flourishing. Learn how Atlas Network, Students For Liberty and Australia’s Institute of Public Affairs build a worldwide ecosystem of think tanks and activists dedicated to individual freedom and limited government.</p>
+        </article>
+        <article>
+          <h2><a href="article-limited-government.html">Limited Government and Regulatory Reform</a></h2>
+          <p>Reducing the state’s footprint is key to liberty. This piece surveys campaigns to shrink bureaucracy and promote federalism—from Americans for Limited Government’s fight against the administrative state to free‑market think tanks in Oregon and Australia.</p>
+        </article>
+        <article>
+          <h2><a href="article-individual-rights.html">Defending Individual Rights</a></h2>
+          <p>Protecting constitutional rights requires vigilance. We examine how groups like the Center for Individual Freedom, Families Against Mandatory Minimums and the Mackinac Center work to uphold due process, fair sentencing and property rights.</p>
+        </article>
+        <article>
+          <h2><a href="article-education-youth.html">Education and Youth for Liberty</a></h2>
+          <p>How do we nurture the next generation of freedom advocates? Discover how scholarly institutions, voucher programmes and global student networks cultivate respect for the rule of law, decentralisation and individual autonomy.</p>
+        </article>
+        <article>
+          <h2><a href="article-economic-freedom.html">Economic Freedom and Global Prosperity</a></h2>
+          <p>Economic freedom indices show that people in the freest countries enjoy higher incomes, longer lives and cleaner environments. This article analyses global data and highlights institutions advocating free markets worldwide.</p>
+        </article>
       </section>
     </div>
   </main>
@@ -122,13 +142,45 @@
   </footer>
   <script>
     (function () {
-      const btn = document.querySelector('.nav-toggle');
+      // Navigation toggle for mobile view
+      const navToggle = document.querySelector('.nav-toggle');
       const nav = document.getElementById('primary-navigation');
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-      });
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('open');
+        });
+      }
+      // Ensure theme toggle button exists
+      const headerInner = document.querySelector('.header-inner');
+      let themeToggle = document.getElementById('theme-toggle');
+      if (!themeToggle && headerInner) {
+        themeToggle = document.createElement('button');
+        themeToggle.id = 'theme-toggle';
+        themeToggle.className = 'theme-toggle';
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        headerInner.appendChild(themeToggle);
+      }
+      const body = document.body;
+      function updateIcon() {
+        if (!themeToggle) return;
+        themeToggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+      }
+      if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          body.classList.add('dark');
+        }
+        updateIcon();
+        themeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark');
+          localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+          updateIcon();
+        });
+      }
+      // Update copyright year automatically
       const yearElem = document.getElementById('year');
       if (yearElem) {
         yearElem.textContent = new Date().getFullYear();
