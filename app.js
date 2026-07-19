@@ -35,20 +35,39 @@
 
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
-  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
-    link.rel = 'noopener noreferrer';
-  });
+  const secureExternalLinks = (root = document) => {
+    root.querySelectorAll('a[target="_blank"]').forEach((link) => { link.rel = 'noopener noreferrer'; });
+  };
+  secureExternalLinks();
 
   const progress = document.querySelector('[data-reading-progress]');
+  const updateProgress = () => {
+    if (!progress) return;
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const pct = max > 0 ? Math.min(100, Math.max(0, (doc.scrollTop / max) * 100)) : 0;
+    progress.style.width = `${pct}%`;
+  };
   if (progress) {
-    const update = () => {
-      const doc = document.documentElement;
-      const max = doc.scrollHeight - doc.clientHeight;
-      const pct = max > 0 ? Math.min(100, Math.max(0, (doc.scrollTop / max) * 100)) : 0;
-      progress.style.width = `${pct}%`;
-    };
-    update();
-    addEventListener('scroll', update, { passive: true });
-    addEventListener('resize', update);
+    updateProgress();
+    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('resize', updateProgress);
+  }
+
+  const report = document.querySelector('[data-report-parts]');
+  if (report) {
+    const parts = report.dataset.reportParts.split(',').map((part) => part.trim()).filter(Boolean);
+    Promise.all(parts.map(async (part) => {
+      const response = await fetch(part, { credentials: 'same-origin' });
+      if (!response.ok) throw new Error(`Could not load ${part}`);
+      return response.text();
+    })).then((sections) => {
+      report.innerHTML = sections.join('');
+      secureExternalLinks(report);
+      updateProgress();
+      if (location.hash) requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView());
+    }).catch(() => {
+      report.innerHTML = '<div class="source-box"><h3>The report could not be assembled.</h3><p>Please refresh the page. If the problem persists, return to the Insights page and try again.</p></div>';
+    });
   }
 })();
