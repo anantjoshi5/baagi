@@ -1,114 +1,46 @@
-<!DOCTYPE html>
-<!-- Contact page for Baagi.
-     This page adopts the same header, navigation and footer structure used on
-     the homepage, ensuring a consistent experience across the site. A meta
-     description improves search visibility. -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Baagi</title>
-  <meta name="description" content="Get in touch with Baagi to collaborate, learn more about our work or discuss partnerships." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060a11">
+  <meta name="description" content="Contact Baagi about research collaboration, regulatory strategy, AI governance, market entry or institutional design.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact">
+  <meta property="og:description" content="Contact Baagi about research collaboration, regulatory strategy, AI governance, market entry or institutional design.">
+  <title>Contact · Baagi</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Baagi Home">
-        <img class="brand-logo" src="images/gadsden-snake.png" alt="Gadsden snake logo" />
-        <span class="brand-name">Baagi</span>
-      </a>
-      <nav class="main-nav" role="navigation" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
-          <span class="hamburger"></span>
-        </button>
-        <ul id="primary-navigation" class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="problem.html">Problem &amp; Vision</a></li>
-          <li><a href="philosophy.html">Philosophy</a></li>
-          <li><a href="approach.html">Approach</a></li>
-          <li><a href="stakeholders.html">Stakeholders</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- Dark mode toggle button for switching themes -->
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Baagi home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Baagi</span></a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <ul id="primary-navigation" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="framework.html">Mission</a></li>
+        <li><a href="services.html">Capabilities</a></li>
+        <li><a href="articles.html">Insights</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle colour theme" aria-pressed="false"><span aria-hidden="true">◐</span></button>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation"><span class="hamburger" aria-hidden="true"></span></button>
     </div>
-  </header>
-
-  <main id="main" class="site-main">
-    <div class="container">
-      <header>
-        <h1>Contact Us</h1>
-        <p class="muted">Get in touch to collaborate or learn more</p>
-      </header>
-      <section>
-        <h2>Send us a message</h2>
-        <p>If you are a government official, NGO, researcher or concerned citizen and would like to work with Baagi or share your experiences, please reach out. We believe in collaboration and welcome enquiries about pilots, research projects and partnerships.</p>
-        <p>Email: <a href="mailto:ajoshi@myrsm.nl">ajoshi@myrsm.nl</a></p>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>Baagi</strong>
-        <p class="muted">Design for community systems</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="legal muted">
-        <p>© <span id="year">2025</span> Baagi. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <script>
-    (function () {
-      // Navigation toggle for mobile view
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-navigation');
-      if (navToggle && nav) {
-        navToggle.addEventListener('click', () => {
-          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-          navToggle.setAttribute('aria-expanded', String(!expanded));
-          nav.classList.toggle('open');
-        });
-      }
-      // Theme toggle logic
-      const themeToggle = document.getElementById('theme-toggle');
-      const body = document.body;
-      function updateIcon() {
-        if (!themeToggle) return;
-        themeToggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
-      }
-      if (themeToggle) {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          body.classList.add('dark');
-        }
-        updateIcon();
-        themeToggle.addEventListener('click', () => {
-          body.classList.toggle('dark');
-          localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
-          updateIcon();
-        });
-      }
-      // Update copyright year automatically
-      const yearElem = document.getElementById('year');
-      if (yearElem) {
-        yearElem.textContent = new Date().getFullYear();
-      }
-    })();
-  </script>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container"><p class="eyebrow">Contact</p><h1>Start with the <span class="gradient-text">hard question</span>.</h1><p class="lead">Research collaboration, regulatory strategy, AI governance, market entry or institutional design—send the context and the decision you are trying to make.</p></div></section>
+<section class="section-tight"><div class="container grid-2"><div class="panel contact-panel stacked"><p class="eyebrow">Email</p><h2><a href="mailto:ajoshi@myrsm.nl">ajoshi@myrsm.nl</a></h2><p>For serious enquiries, include the organisation, problem, geography and timing where possible.</p></div><div class="card"><div class="card-kicker">Useful context</div><h3>A good first note answers four things.</h3><p>What decision is being made? What is blocking it? Who is affected? When does the decision need to be made?</p></div></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Baagi</span></a><div class="footer-copy">Clear rules. Constrained power. Open opportunity.</div></div>
+    <nav class="footer-nav" aria-label="Footer navigation"><a href="framework.html">Mission</a><a href="services.html">Capabilities</a><a href="articles.html">Insights</a><a href="contact.html">Contact</a></nav>
+    <div class="footer-copy">© <span data-year></span> Baagi</div>
+  </div>
+</footer>
+<script src="app.js" defer></script>
 </body>
 </html>
