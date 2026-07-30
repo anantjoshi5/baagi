@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zwarte Peper Consulting Insights</title>
+  <subtitle>AI-native research and advisory on institutions, markets, technology and cross-border strategy.</subtitle>
+  <link href="https://anantjoshi5.github.io/baagi/feed.xml" rel="self"/>
+  <link href="https://anantjoshi5.github.io/baagi/articles.html"/>
+  <id>https://anantjoshi5.github.io/baagi/</id>
+  <updated>2026-07-30T00:00:00+02:00</updated>
+  <author>
+    <name>Zwarte Peper Consulting</name>
+  </author>
+  <entry>
+    <title>Regulate the Harm, Not the Tool: A Pro-Innovation Framework for AI Governance</title>
+    <link href="https://anantjoshi5.github.io/baagi/article-ai-regulation.html"/>
+    <id>https://anantjoshi5.github.io/baagi/article-ai-regulation.html</id>
+    <published>2026-07-27T00:00:00+02:00</published>
+    <updated>2026-07-30T00:00:00+02:00</updated>
+    <summary>A legal and public-policy framework for rapid AI development, accountable high-impact deployment and intelligent public-sector adoption.</summary>
+  </entry>
+  <entry>
+    <title>Beyond the Permit Raj: A Legal and Operating Model for Trust-Based Regulation</title>
+    <link href="https://anantjoshi5.github.io/baagi/article-permit.html"/>
+    <id>https://anantjoshi5.github.io/baagi/article-permit.html</id>
+    <published>2026-07-27T00:00:00+02:00</published>
+    <updated>2026-07-30T00:00:00+02:00</updated>
+    <summary>A legal and operating model for replacing discretionary approvals with proportionate, digital and accountable regulation.</summary>
+  </entry>
+  <entry>
+    <title>Trade Agreements and Prosperity: An Evidence-Led Framework</title>
+    <link href="https://anantjoshi5.github.io/baagi/article-trade.html"/>
+    <id>https://anantjoshi5.github.io/baagi/article-trade.html</id>
+    <published>2026-07-27T00:00:00+02:00</published>
+    <updated>2026-07-30T00:00:00+02:00</updated>
+    <summary>A legal, economic and strategic test for trade agreements that create contestable markets, support development and remain workable for business.</summary>
+  </entry>
+  <entry>
+    <title>EU–India Trade Agreement and Its Implications for Dutch Companies</title>
+    <link href="https://anantjoshi5.github.io/baagi/article-eu-india-fta.html"/>
+    <id>https://anantjoshi5.github.io/baagi/article-eu-india-fta.html</id>
+    <updated>2026-07-19T00:00:00+02:00</updated>
+    <summary>A legal and commercial report on the negotiated FTA, implementation scenarios, tariff and regulatory effects, sector opportunities and execution priorities for Dutch firms.</summary>
+  </entry>
+</feed>
