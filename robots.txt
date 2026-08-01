@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /baagi-improved%202/
 
-Sitemap: https://anantjoshi5.github.io/baagi/sitemap.xml
+Sitemap: https://zwartepeper.pages.dev/sitemap.xml
