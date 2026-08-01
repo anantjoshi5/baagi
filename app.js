@@ -35,6 +35,48 @@
 
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
+  const contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    const status = document.querySelector('[data-contact-status]');
+    const submitButton = contactForm.querySelector('[data-contact-submit]');
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+
+      const endpoint = contactForm.dataset.formEndpoint;
+      if (!endpoint || !endpoint.startsWith('https://formspree.io/f/')) {
+        if (status) status.textContent = 'Online submission is being activated. For urgent matters, please call +31 6 5398 6097.';
+        return;
+      }
+
+      const data = new FormData(contactForm);
+      const value = (key) => String(data.get(key) || '').trim();
+      const subjectContext = value('organisation') || value('name');
+      data.set('_subject', `Zwarte Peper enquiry · ${value('work')} · ${subjectContext}`);
+      data.set('source', 'Zwarte Peper Consulting website');
+
+      if (submitButton) submitButton.disabled = true;
+      contactForm.setAttribute('aria-busy', 'true');
+      if (status) status.textContent = 'Sending your enquiry securely…';
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' }
+        });
+        if (!response.ok) throw new Error('Submission failed');
+        contactForm.reset();
+        if (status) status.textContent = 'Thank you. Your enquiry has been sent successfully.';
+      } catch (error) {
+        if (status) status.textContent = 'The form could not be sent. Please try again or call +31 6 5398 6097.';
+      } finally {
+        contactForm.removeAttribute('aria-busy');
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  }
+
   const secureExternalLinks = (root = document) => {
     root.querySelectorAll('a[target="_blank"]').forEach((link) => { link.rel = 'noopener noreferrer'; });
   };
