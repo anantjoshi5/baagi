@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://anantjoshi5.github.io/baagi/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://anantjoshi5.github.io/baagi/framework.html</loc>
@@ -10,15 +10,19 @@
   </url>
   <url>
     <loc>https://anantjoshi5.github.io/baagi/services.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://anantjoshi5.github.io/baagi/articles.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://anantjoshi5.github.io/baagi/contact.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://anantjoshi5.github.io/baagi/privacy.html</loc>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://anantjoshi5.github.io/baagi/article-eu-india-fta.html</loc>
@@ -33,7 +37,16 @@
     <lastmod>2026-07-30</lastmod>
   </url>
   <url>
+    <loc>https://anantjoshi5.github.io/baagi/article-ai-native-government.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://anantjoshi5.github.io/baagi/article-global-ai-governance.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
     <loc>https://anantjoshi5.github.io/baagi/article-abundance.html</loc>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://anantjoshi5.github.io/baagi/article-cbdc.html</loc>

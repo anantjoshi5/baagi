@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090908">
-  <meta name="description" content="Contact Zwarte Peper Consulting about political research, campaign strategy, public policy, institutional reform, AI adoption or cross-border regulation.">
+  <meta name="description" content="Contact Zwarte Peper Consulting about public policy, institutional reform, AI adoption, public-service delivery or cross-border regulation.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact">
-  <meta property="og:description" content="Start a conversation about a consequential political, campaign, public-policy or public-sector decision.">
+  <meta property="og:description" content="Start a conversation about a consequential public-policy, regulatory or institutional decision.">
   <meta property="og:site_name" content="Zwarte Peper Consulting">
   <title>Contact · Zwarte Peper Consulting</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260801">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:url" content="https://anantjoshi5.github.io/baagi/contact.html">
   <link rel="canonical" href="https://anantjoshi5.github.io/baagi/contact.html">
@@ -37,12 +37,99 @@
   </div>
 </header>
 <main id="main">
-<section class="page-hero"><div class="container"><p class="eyebrow">Contact</p><h1>Start with the <span class="gradient-text">decision</span>.</h1><p class="lead">For political research, campaign strategy, public policy, institutional reform, AI adoption or cross-border regulation, send the context, the decision owner and the date by which action must become possible.</p></div></section>
-<section class="section-tight"><div class="container grid-2"><div class="panel contact-panel stacked"><p class="eyebrow">Email</p><h2><a href="mailto:ajoshi@myrsm.nl">ajoshi@myrsm.nl</a></h2><p>For serious enquiries, include the organisation, problem, geography and timing where possible.</p></div><div class="card"><div class="card-kicker">Useful context</div><h3>A good first note answers four things.</h3><p>What decision is being made? What is blocking it? Who is affected? When does the decision need to be made?</p></div></div></section></main>
+<section class="page-hero"><div class="container"><p class="eyebrow">Contact</p><h1>Start with the <span class="gradient-text">decision</span>.</h1><p class="lead">For public policy, institutional reform, AI adoption, public-service delivery or cross-border regulation, tell us what needs to move and what is preventing it.</p></div></section>
+<section class="section-tight">
+  <div class="container contact-shell">
+    <div class="panel contact-form-panel">
+      <div class="contact-form-intro">
+        <p class="eyebrow">Project enquiry</p>
+        <h2>Tell us what needs to move.</h2>
+        <p>Share enough context for a useful first conversation. We will not publish or store your submission on this website.</p>
+      </div>
+      <form class="contact-form" data-contact-form data-form-endpoint="https://formspree.io/f/mpqvgzwl">
+        <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <div class="field">
+            <label for="contact-name">Your name <span aria-hidden="true">*</span></label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="contact-organisation">Organisation</label>
+            <input id="contact-organisation" name="organisation" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="contact-email">Your email <span aria-hidden="true">*</span></label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          </div>
+          <div class="field">
+            <label for="contact-phone">Your phone</label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="field">
+            <label for="contact-work">Area of work <span aria-hidden="true">*</span></label>
+            <select id="contact-work" name="work" required>
+              <option value="">Select an area</option>
+              <option>Public policy and regulatory design</option>
+              <option>Institutional reform</option>
+              <option>AI strategy or adoption</option>
+              <option>Public-service delivery</option>
+              <option>Cross-border regulation</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-geography">Geography</label>
+            <input id="contact-geography" name="geography" type="text" placeholder="Country, region or institution">
+          </div>
+          <div class="field span-2">
+            <label for="contact-brief">The decision or brief <span aria-hidden="true">*</span></label>
+            <textarea id="contact-brief" name="brief" rows="7" placeholder="What decision is being made, what is blocking it, who is affected, and what would a useful outcome look like?" required></textarea>
+          </div>
+          <div class="field span-2">
+            <label for="contact-timeline">When does action need to become possible?</label>
+            <select id="contact-timeline" name="timeline">
+              <option value="">Select a timeframe</option>
+              <option>Within two weeks</option>
+              <option>Within one month</option>
+              <option>This quarter</option>
+              <option>Exploring</option>
+            </select>
+          </div>
+          <div class="field span-2 checkbox-field">
+            <input id="contact-consent" name="privacy_acknowledgement" type="checkbox" value="Acknowledged" required>
+            <label for="contact-consent">I have read the <a href="privacy.html">privacy notice</a> and understand that Formspree processes this enquiry to deliver it to Zwarte Peper Consulting.</label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit" data-contact-submit>Send enquiry <span aria-hidden="true">→</span></button>
+          <p class="contact-status" data-contact-status role="status" aria-live="polite">Required fields are marked with an asterisk.</p>
+        </div>
+      </form>
+    </div>
+    <aside class="contact-sidebar">
+      <div class="panel phone-card">
+        <div class="availability"><span class="availability-dot" aria-hidden="true"></span>Call us 24×7</div>
+        <a class="phone-number" href="tel:+31653986097">+31 6 5398 6097</a>
+        <p>For a time-sensitive policy, regulatory or public-sector matter, call directly.</p>
+      </div>
+      <div class="card">
+        <div class="card-kicker">Useful context</div>
+        <h3>A good first note answers four things.</h3>
+        <p>What decision is being made? What is blocking it? Who is affected? When does the decision need to be made?</p>
+      </div>
+      <div class="card">
+        <div class="card-kicker">Privacy</div>
+        <h3>No website database.</h3>
+        <p>The website does not maintain its own enquiry database. Formspree processes submissions for delivery under the terms explained in our privacy notice.</p>
+        <p class="privacy-caution">Do not submit classified, privileged or otherwise sensitive information through this form.</p>
+      </div>
+    </aside>
+  </div>
+</section></main>
 <footer class="site-footer">
   <div class="container footer-inner">
     <div><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">ZP</span><span class="brand-wordmark"><span class="brand-name">Zwarte Peper</span><span class="brand-descriptor">Consulting</span></span></a><div class="footer-copy">Clear rules. Constrained power. Open opportunity.</div></div>
-    <nav class="footer-nav" aria-label="Footer navigation"><a href="framework.html">Mission</a><a href="services.html">Capabilities</a><a href="articles.html">Insights</a><a href="contact.html">Contact</a></nav>
+    <nav class="footer-nav" aria-label="Footer navigation"><a href="framework.html">Mission</a><a href="services.html">Capabilities</a><a href="articles.html">Insights</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
     <div class="footer-copy">© <span data-year></span> Zwarte Peper Consulting</div>
   </div>
 </footer>
