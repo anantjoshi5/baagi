@@ -98,6 +98,7 @@
 
   const report = document.querySelector('[data-report-parts]');
   if (report) {
+    const reportStatus = document.querySelector('[data-report-status]');
     const parts = report.dataset.reportParts.split(',').map((part) => part.trim()).filter(Boolean);
     Promise.all(parts.map(async (part) => {
       const response = await fetch(part, { credentials: 'same-origin' });
@@ -105,10 +106,14 @@
       return response.text();
     })).then((sections) => {
       report.innerHTML = sections.join('');
+      report.setAttribute('aria-busy', 'false');
+      if (reportStatus) reportStatus.textContent = 'Full report loaded.';
       secureExternalLinks(report);
       updateProgress();
       if (location.hash) requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView());
     }).catch(() => {
+      report.setAttribute('aria-busy', 'false');
+      if (reportStatus) reportStatus.textContent = 'The full report could not be loaded.';
       report.innerHTML = '<div class="source-box"><h3>The report could not be assembled.</h3><p>Please refresh the page. If the problem persists, return to the Insights page and try again.</p></div>';
     });
   }
